@@ -1,8 +1,9 @@
 {
-  "version": "0.0.0.7",
-  "changelog": [
-    "Versión inicial del juego 'El Principio'",
-    "Implementación de todas las animaciones ASCII",
-    "Sistema de guardado y carga de partidas"
-  ]
+    "version": "0.0.7",
+    "changelog": [
+        "Agregado capítulo 2",
+        "Mejoras en animaciones",
+        "Actualizado main.py",
+        "Nuevos archivos de historia y ASCII art"
+    ]
 }
