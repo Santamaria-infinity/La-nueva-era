@@ -4,7 +4,7 @@
 import os
 import sys
 from animations.text_animation import clear_screen, type_text, slow_print
-from ascii_art.menu_art import show_title, show_menu
+from ascii_art.menu_art import show_title, show_menu, show_angel
 from story.el_principio import show_intro_story
 from story.capitulo_2 import capitulo_2
 from game_logic.save_system import SaveSystem
@@ -20,6 +20,7 @@ def main_menu():
     while True:
         clear_screen()
         show_title()
+        show_angel()
         show_menu()
         
         choice = input("\n> Elige una opción (1-3): ").strip()
