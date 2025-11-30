@@ -48,11 +48,6 @@ Cuando el asteroide impacta, algo extraño sucede: todo desaparece excepto los h
 pkg update
 pkg install python git
 ```
-#Instalar requirementos (Opcional)
-
-```bash
-pip install -r requirements.txt
-```
 
 ### Dar permiso de almacenamiento (Opcional)
 
@@ -71,6 +66,12 @@ Acepta los permisos.
 cd /storage/emulated/0
 git clone https://github.com/Santamaria-infinity/La-nueva-era.git
 cd La-Nueva-Era
+```
+
+### Instalar Requerimientos (Opcional)
+
+```bash
+pip install -r requirements.txt
 ```
 
 ### Ejecutar el Juego
