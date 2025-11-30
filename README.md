@@ -49,7 +49,15 @@ Cuando el asteroide impacta, algo extraño sucede: todo desaparece excepto los h
 pkg update
 pkg install python git
 ```
+### Dar permiso de almacenamiento (Opcional)
 
+```bash
+Este paso es obligatorio o Termux dará error al acceder a /storage/emulated/0.
+
+termux-setup-storage
+
+Acepta los permisos.
+```
 ### Descargar el Juego
 
 ```bash
