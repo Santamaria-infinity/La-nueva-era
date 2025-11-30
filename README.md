@@ -92,7 +92,7 @@ python main.py
 
 - Usa los **números** para seleccionar opciones del menú
 - Presiona **ENTER** para continuar la historia
-- El juego se guarda automáticamente después de completar "El Principio"
+- El juego se guarda automáticamente después de completar cada capítulo.
 
 ---
 
@@ -112,7 +112,7 @@ git pull origin main
 ## 📂 Estructura del Proyecto
 
 ```
-game/
+La-Nueva-Era/
 ├── main.py                    # Archivo principal del juego
 ├── version.json               # Información de versión
 ├── animations/
