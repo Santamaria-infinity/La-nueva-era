@@ -121,11 +121,12 @@ def start_new_game(save_system, slot):
     # Guardar la partida
     save_system.save_game(slot, player_data)
     
+    clear_screen()
     type_text("\n✅ Partida guardada en Slot " + str(slot) + "\n", 0.05)
+    type_text("\nRegresando al menú principal...\n", 0.05)
     input("\nPresiona ENTER para continuar...")
     
-    # Después de mostrar el Capítulo 2, el juego termina aquí
-    sys.exit(0)
+    # Regresa al menú principal (el while True del main_menu se encarga)
 
 def load_game(save_system, slot):
     """Cargar una partida existente"""
@@ -141,11 +142,31 @@ def load_game(save_system, slot):
         
         input("\nPresiona ENTER para continuar...")
         
-        # SIEMPRE mostrar el Capítulo 2, sin importar el nivel
+        # Ejecutar el Capítulo 2 completo desde el inicio
+        clear_screen()
+        type_text("\n\n", 0.05)
+        type_text("═" * 70 + "\n", 0.02)
+        type_text("          CAPÍTULO 2: LA CAÍDA DEL CREADOR\n", 0.05)
+        type_text("═" * 70 + "\n\n", 0.02)
+        input("\nPresiona ENTER para comenzar...")
+        
+        # Mostrar Capítulo 2
         capitulo_2()
         
-        # Después de mostrar el Capítulo 2, el juego termina aquí
-        sys.exit(0)
+        # Actualizar y guardar datos del jugador
+        player_data['level'] = 2
+        player_data['location'] = "Tierras Salvajes del Exilio"
+        if "Círculo Mágico Básico" not in player_data.get('inventory', []):
+            player_data.setdefault('inventory', []).append("Círculo Mágico Básico")
+        
+        save_system.save_game(slot, player_data)
+        
+        clear_screen()
+        type_text("\n✅ Partida guardada en Slot " + str(slot) + "\n", 0.05)
+        type_text("\nRegresando al menú principal...\n", 0.05)
+        input("\nPresiona ENTER para continuar...")
+        
+        # Regresa al menú principal (el while True del main_menu se encarga)
 
 if __name__ == "__main__":
     main_menu()
