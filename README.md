@@ -50,13 +50,14 @@ pkg update
 pkg install python git
 ```
 
-### Descargar el Juego
-
-```bash
-cd /storage/emulated/0
-git clone https://github.com/TU_USUARIO/la-nueva-era.git
-cd la-nueva-era/game
-```
+  ### Descargar el Juego
+  
+  ```bash
+  cd /storage/emulated/0
+  git clone https://github.com/Santamaria-infinity/La-nueva-era.git
+- cd La-Nueva-Era/game
++ cd La-Nueva-Era
+  ```
 
 ### Ejecutar el Juego
 
