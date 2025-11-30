@@ -6,11 +6,16 @@ import sys
 from animations.text_animation import clear_screen, type_text, slow_print
 from ascii_art.menu_art import show_title, show_menu
 from story.el_principio import show_intro_story
+from story.capitulo_2 import capitulo_2
 from game_logic.save_system import SaveSystem
+from utils.version_checker import check_for_updates
 
 def main_menu():
     """Menú principal del juego"""
     save_system = SaveSystem()
+    
+    # Verificar actualizaciones al iniciar
+    check_for_updates()
     
     while True:
         clear_screen()
@@ -88,18 +93,29 @@ def start_new_game(save_system, slot):
     """Iniciar una nueva partida"""
     clear_screen()
     
-    # Mostrar la historia de introducción
+    # Mostrar la historia de introducción (Capítulo 1)
     show_intro_story()
+    
+    # Transición al Capítulo 2
+    clear_screen()
+    type_text("\n\n", 0.05)
+    type_text("═" * 70 + "\n", 0.02)
+    type_text("          CONTINUARÁ...\n", 0.05)
+    type_text("═" * 70 + "\n\n", 0.02)
+    input("\nPresiona ENTER para continuar con el Capítulo 2...")
+    
+    # Mostrar Capítulo 2: La Caída del Creador
+    capitulo_2()
     
     # Crear datos iniciales del jugador
     player_data = {
         "name": "Superviviente",
-        "level": 1,
-        "mana": 10,
-        "max_mana": 10,
-        "location": "Ruinas del Mundo Antiguo",
-        "inventory": [],
-        "skills": ["Creación Básica"]
+        "level": 2,
+        "mana": 50,
+        "max_mana": 50,
+        "location": "Tierras Salvajes del Exilio",
+        "inventory": ["Círculo Mágico Básico"],
+        "skills": ["Creación Básica", "Magia de Tierra", "Magia de Viento", "Magia de Agua"]
     }
     
     # Guardar la partida
@@ -108,8 +124,8 @@ def start_new_game(save_system, slot):
     type_text("\n✅ Partida guardada en Slot " + str(slot) + "\n", 0.05)
     input("\nPresiona ENTER para continuar...")
     
-    # Aquí continuaría el juego...
-    game_loop(save_system, slot, player_data)
+    # Después de mostrar el Capítulo 2, el juego termina aquí
+    sys.exit(0)
 
 def load_game(save_system, slot):
     """Cargar una partida existente"""
@@ -125,16 +141,11 @@ def load_game(save_system, slot):
         
         input("\nPresiona ENTER para continuar...")
         
-        # Aquí continuaría el juego...
-        game_loop(save_system, slot, player_data)
-
-def game_loop(save_system, slot, player_data):
-    """Loop principal del juego"""
-    clear_screen()
-    type_text("\n🎮 El juego continuará aquí...\n", 0.05)
-    type_text("(Esta es la versión inicial del menú)\n", 0.03)
-    input("\nPresiona ENTER para volver al menú principal...")
+        # SIEMPRE mostrar el Capítulo 2, sin importar el nivel
+        capitulo_2()
+        
+        # Después de mostrar el Capítulo 2, el juego termina aquí
+        sys.exit(0)
 
 if __name__ == "__main__":
     main_menu()
-

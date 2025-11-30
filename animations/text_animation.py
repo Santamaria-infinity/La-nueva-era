@@ -20,6 +20,14 @@ def slow_print(text, delay=0.03):
     """Imprimir texto con efecto de escritura"""
     type_text(text + "\n", delay)
 
+def print_slow(text, delay=0.03):
+    """Alias para slow_print para compatibilidad"""
+    slow_print(text, delay)
+
+def pause(seconds):
+    """Pausa por un número de segundos"""
+    time.sleep(seconds)
+
 def print_with_delay(text, delay=1):
     """Imprimir texto y esperar"""
     print(text)
