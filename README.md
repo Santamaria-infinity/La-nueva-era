@@ -50,14 +50,13 @@ pkg update
 pkg install python git
 ```
 
-  ### Descargar el Juego
-  
-  ```bash
-  cd /storage/emulated/0
-  git clone https://github.com/Santamaria-infinity/La-nueva-era.git
-- cd La-Nueva-Era/game
-+ cd La-Nueva-Era
-  ```
+### Descargar el Juego
+
+```bash
+cd /storage/emulated/0
+git clone https://github.com/Santamaria-infinity/La-nueva-era.git
+cd La-Nueva-Era
+```
 
 ### Ejecutar el Juego
 
@@ -88,7 +87,7 @@ Cuando haya una nueva versión disponible, el juego te lo notificará automátic
 Para actualizar, ejecuta:
 
 ```bash
-cd /storage/emulated/0/la-nueva-era
+cd /storage/emulated/0/La-Nueva-Era
 git pull origin main
 ```
 
@@ -150,7 +149,7 @@ Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ## 👨‍💻 Autor
 
-Santamaria-infinity: Creado con ❤️ para la comunidad de Termux
+Creado con ❤️ para la comunidad de Termux
 
 ---
 
