@@ -126,9 +126,9 @@ game/
 
 ## 🛠️ Desarrollo
 
-### Versión Actual: 0.0.0.1
+### Versión Actual: 0.0.0.7
 
-**Fecha de lanzamiento:** 15 de enero de 2024
+**Fecha de lanzamiento:** 29 de noviembre de 2025
 
 **Changelog:**
 - ✅ Versión inicial del juego
@@ -171,7 +171,7 @@ Gracias a todos los que juegan y apoyan este proyecto. ¡Disfruta la aventura!
 ## 📞 Contacto
 
 - **GitHub Issues:** Para reportar bugs o sugerencias
-- **Versión:** 0.0.0.1
+- **Versión:** 0.0.0.7
 - **Plataforma:** Termux (Android)
 
 ---
