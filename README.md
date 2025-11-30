@@ -48,6 +48,12 @@ Cuando el asteroide impacta, algo extraño sucede: todo desaparece excepto los h
 pkg update
 pkg install python git
 ```
+#Instalar requirementos (Opcional)
+
+```bash
+pip install -r requirements.txt
+```
+
 ### Dar permiso de almacenamiento (Opcional)
 
 
