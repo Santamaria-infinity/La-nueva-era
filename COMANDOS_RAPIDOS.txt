@@ -1,0 +1,119 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║             ⚡ COMANDOS RÁPIDOS PARA TERMUX Y GIT ⚡             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚙️ COMANDOS BÁSICOS DE TERMUX:
+
+1.  Actualizar paquetes:
+    ```bash
+    pkg update && pkg upgrade
+    ```
+
+2.  Instalar Git:
+    ```bash
+    pkg install git -y
+    ```
+
+3.  Navegar a la carpeta de tu juego (ajusta la ruta si es diferente):
+    ```bash
+    cd /storage/emulated/0/La\ nueva\ era/game
+    ```
+
+4.  Ejecutar tu juego (desde la carpeta `game`):
+    ```bash
+    python main.py
+    ```
+    *   Si estás en la carpeta `/storage/emulated/0/La nueva era/`, entonces sería:
+        ```bash
+        python game/main.py
+        ```
+
+5.  Abrir un archivo con el editor `nano`:
+    ```bash
+    nano ruta/del/archivo.py
+    ```
+    *   Para guardar en `nano`: `Ctrl + S`
+    *   Para salir de `nano`: `Ctrl + X`
+
+6.  Crear una carpeta:
+    ```bash
+    mkdir -p ruta/de/la/carpeta
+    ```
+    *   `-p` crea carpetas padres si no existen.
+
+═══════════════════════════════════════════════════════════════════
+
+🌳 COMANDOS DE GIT (DESDE LA CARPETA DE TU JUEGO):
+
+1.  Configurar tu nombre de usuario y email (solo la primera vez):
+    ```bash
+    git config --global user.name "Tu Nombre"
+    git config --global user.email "tu_email@ejemplo.com"
+    ```
+
+2.  Inicializar un repositorio Git en tu carpeta (solo la primera vez):
+    ```bash
+    git init
+    ```
+
+3.  Agregar todos los cambios al área de preparación:
+    ```bash
+    git add .
+    ```
+
+4.  Confirmar los cambios (crear un "commit"):
+    ```bash
+    git commit -m "Tu mensaje de commit aquí"
+    ```
+
+5.  Conectar tu repositorio local con el de GitHub (solo la primera vez):
+    *   Reemplaza `TU_USUARIO` y `TU_REPO`.
+    ```bash
+    git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+    ```
+
+6.  Establecer la rama principal (solo la primera vez):
+    ```bash
+    git branch -M main
+    ```
+
+7.  Subir tus cambios a GitHub (la primera vez usa `-u origin main`):
+    ```bash
+    git push -u origin main
+    ```
+    *   Después de la primera vez, solo necesitas:
+        ```bash
+        git push origin main
+        ```
+
+8.  Descargar las últimas actualizaciones desde GitHub (para tus jugadores o para ti):
+    ```bash
+    git pull origin main
+    ```
+
+9.  Ver el estado de tus archivos (cuáles han cambiado, cuáles no):
+    ```bash
+    git status
+    ```
+
+10. Ver el historial de tus commits:
+    ```bash
+    git log
+    ```
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 FLUJO DE TRABAJO PARA ACTUALIZAR TU JUEGO:
+
+1.  Haz cambios en tus archivos (código, `version.json`, etc.).
+2.  Desde la carpeta de tu juego en Termux:
+    ```bash
+    git add .
+    git commit -m "Descripción de los cambios de esta versión"
+    git push origin main
+    ```
+3.  ¡Listo! Tus jugadores podrán actualizar con `git pull origin main`.
+
+══════════════════════════════════════════════════

@@ -1,0 +1,36 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                       LA NUEVA ERA                               ║
+║                                                                  ║
+║                                                                  ║
+║                  1. Nueva Partida                                ║
+║                  2. Cargar Partida                               ║
+║                  3. Salir                                        ║
+║                                                                  ║
+║                                                                  ║
+║                                                                  ║
+║                                                                  ║
+║                                                                  ║
+║                                                              v0.0.0.1
+╚══════════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      ¡NUEVA ACTUALIZACIÓN DISPONIBLE!              ║
+╚══════════════════════════════════════════════════════════════════╝
+Tu versión: 0.0.0.1
+Versión disponible: 0.0.0.2
+
+Novedades:
+- Se añadió un nuevo personaje.
+- Se corrigió un error en el sistema de guardado.
+- Mejoras de rendimiento.
+
+Para actualizar, por favor, sigue estos pasos en Termux:
+1. Abre Termux y navega a la carpeta de tu juego:
+   cd /storage/emulated/0/La\ nueva\ era
+2. Ejecuta los comandos de Git para descargar la actualización:
+   git pull origin main
+
+¡Disfruta de la nueva versión!
+
+[Presiona ENTER para continuar...]
