@@ -149,7 +149,7 @@ Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ## 👨‍💻 Autor
 
-Creado con ❤️ para la comunidad de Termux
+Santamaria-infinity: Creado con ❤️ para la comunidad de Termux
 
 ---
 
