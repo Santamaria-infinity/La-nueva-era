@@ -14,8 +14,6 @@ En el año 2157, un asteroide masivo se dirige hacia la Tierra. Los más ricos y
 
 Cuando el asteroide impacta, algo extraño sucede: todo desaparece excepto los humanos y la tierra árida. Sin recursos, la humanidad cae en el caos... hasta que un ángel aparece y te elige como el salvador de la especie humana.
 
-**¿Podrás reconstruir el mundo y salvar a la humanidad?**
-
 ---
 
 ## ✨ Características
