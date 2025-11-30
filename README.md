@@ -51,13 +51,15 @@ pkg install python git
 ```
 ### Dar permiso de almacenamiento (Opcional)
 
-```bash
+
 Este paso es obligatorio o Termux dará error al acceder a /storage/emulated/0.
 
+```bash
 termux-setup-storage
+```
 
 Acepta los permisos.
-```
+
 ### Descargar el Juego
 
 ```bash
