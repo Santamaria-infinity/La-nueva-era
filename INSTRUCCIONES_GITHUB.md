@@ -1,204 +1,261 @@
-# 🚀 Guía Completa: Publicar y Actualizar tu Juego en GitHub desde Termux 🚀
+# 📦 Instrucciones para Publicar el Juego en GitHub
 
-Esta guía te ayudará a subir tu juego a GitHub y a gestionar las actualizaciones para que tus jugadores puedan recibirlas directamente en Termux.
-
----
-
-## 🎯 **Objetivo:**
-
-1.  Crear un repositorio en GitHub para tu juego.
-2.  Subir todos los archivos de tu juego a GitHub.
-3.  Configurar el sistema de versiones para que detecte y notifique nuevas actualizaciones.
-4.  Aprender a publicar nuevas versiones de tu juego.
+## 🎯 Objetivo
+Publicar tu juego en GitHub para que los usuarios puedan descargarlo y recibir actualizaciones automáticas.
 
 ---
 
-## 🛠️ **Requisitos Previos:**
+## 📱 Paso 1: Instalar Git en Termux
 
-*   **Termux instalado** en tu dispositivo Android.
-*   **Conexión a internet**.
-*   **Tu juego** en la carpeta `/storage/emulated/0/La nueva era/game/`.
+Abre Termux y ejecuta:
 
----
-
-## **Paso 1: Instalar Git en Termux**
-
-Git es la herramienta que usaremos para interactuar con GitHub.
-
-1.  Abre Termux.
-2.  Actualiza los paquetes e instala Git:
-    ```bash
-    pkg update && pkg install git -y
-    ```
-    *   `pkg update`: Actualiza la lista de paquetes.
-    *   `pkg install git -y`: Instala Git (el `-y` acepta automáticamente las preguntas).
+```bash
+pkg update
+pkg install git
+```
 
 ---
 
-## **Paso 2: Crear una Cuenta en GitHub**
+## 🌐 Paso 2: Crear Cuenta en GitHub (desde el celular)
 
-Si ya tienes una, puedes saltar este paso.
-
-1.  Abre tu navegador web (Chrome, Firefox, etc.) en tu celular.
-2.  Ve a la página de GitHub: [https://github.com](https://github.com)
-3.  Haz clic en **"Sign up"** (Registrarse).
-4.  Sigue las instrucciones para crear tu cuenta. Necesitarás un correo electrónico y una contraseña.
-
----
-
-## **Paso 3: Crear un Nuevo Repositorio en GitHub**
-
-Un repositorio es donde se guardará tu proyecto en GitHub.
-
-1.  Una vez que hayas iniciado sesión en GitHub, haz clic en el **icono de "+"** (más) en la esquina superior derecha de la pantalla.
-2.  Selecciona **"New repository"** (Nuevo repositorio).
-3.  **Configura tu repositorio:**
-    *   **Repository name (Nombre del repositorio):** `la-nueva-era` (o el nombre que prefieras para tu juego, pero usa minúsculas y guiones).
-    *   **Description (Descripción):** (Opcional) Una breve descripción de tu juego.
-    *   **Public/Private (Público/Privado):** Selecciona **"Public"** (Público) para que el sistema de versiones pueda acceder a él.
-    *   **NO marques "Add a README file"**, "Add .gitignore" ni "Choose a license". Ya los tenemos en tu proyecto.
-4.  Haz clic en el botón verde **"Create repository"** (Crear repositorio).
+1. Abre tu navegador (Chrome, Firefox, etc.)
+2. Ve a: **https://github.com**
+3. Click en **"Sign up"** (Registrarse)
+4. Completa el formulario:
+   - **Username** (nombre de usuario): Elige un nombre único (ejemplo: `tu_nombre_dev`)
+   - **Email**: Tu correo electrónico
+   - **Password**: Una contraseña segura
+5. Verifica tu email
+6. ¡Listo! Ya tienes cuenta en GitHub
 
 ---
 
-## **Paso 4: Configurar Git en Termux y Subir tu Juego**
+## 📂 Paso 3: Crear un Repositorio en GitHub
 
-Ahora vamos a conectar tu carpeta local con el repositorio de GitHub.
-
-1.  **Navega a la carpeta de tu juego en Termux:**
-    ```bash
-    cd /storage/emulated/0/La\ nueva\ era/game
-    ```
-    *   Asegúrate de estar en la carpeta `game` que contiene `main.py`, `animations`, `ascii_art`, etc.
-
-2.  **Configura tu nombre de usuario y correo electrónico de Git:**
-    *   Reemplaza `"Tu Nombre"` con tu nombre de usuario de GitHub.
-    *   Reemplaza `"tu_email@ejemplo.com"` con el correo electrónico que usaste para GitHub.
-    ```bash
-    git config --global user.name "Tu Nombre"
-    git config --global user.email "tu_email@ejemplo.com"
-    ```
-
-3.  **Inicializa un repositorio Git local:**
-    ```bash
-    git init
-    ```
-    *   Esto crea una carpeta oculta `.git` en tu proyecto.
-
-4.  **Agrega todos los archivos de tu juego al área de preparación de Git:**
-    ```bash
-    git add .
-    ```
-    *   El `.` significa "todos los archivos y carpetas en el directorio actual".
-
-5.  **Confirma los cambios (crea un "commit"):**
-    ```bash
-    git commit -m "Versión inicial 0.0.0.1 del juego 'La Nueva Era'"
-    ```
-    *   `-m` es para el mensaje del commit. Usa un mensaje descriptivo.
-
-6.  **Conecta tu repositorio local con el de GitHub:**
-    *   **¡IMPORTANTE!** Reemplaza `TU_USUARIO` con tu nombre de usuario de GitHub y `TU_REPO` con el nombre de tu repositorio (por ejemplo, `la-nueva-era`).
-    *   Puedes encontrar esta URL en la página de tu repositorio en GitHub, haz clic en el botón verde "Code" y copia la URL HTTPS.
-    ```bash
-    git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
-    ```
-
-7.  **Establece la rama principal (main):**
-    ```bash
-    git branch -M main
-    ```
-
-8.  **Sube tus archivos a GitHub:**
-    ```bash
-    git push -u origin main
-    ```
-    *   La primera vez que hagas esto, GitHub te pedirá tu **nombre de usuario** y **contraseña/token de acceso personal**.
-        *   **Contraseña:** Si tienes la autenticación de dos factores activada, necesitarás crear un "Personal Access Token" (Token de Acceso Personal) en GitHub en lugar de usar tu contraseña normal. Si no, tu contraseña debería funcionar.
-        *   **Cómo crear un Personal Access Token (si lo necesitas):**
-            1.  En GitHub, ve a **Settings** (Configuración) -> **Developer settings** (Configuración de desarrollador) -> **Personal access tokens** (Tokens de acceso personal) -> **Tokens (classic)**.
-            2.  Haz clic en **"Generate new token"** (Generar nuevo token).
-            3.  Dale un nombre (ej. `termux-game`).
-            4.  Marca los permisos `repo`.
-            5.  Haz clic en "Generate token".
-            6.  **Copia el token inmediatamente**, ya que no podrás verlo de nuevo. Usa este token como tu "contraseña" cuando `git push` te lo pida.
+1. En GitHub, click en el botón **"+"** (arriba a la derecha)
+2. Selecciona **"New repository"**
+3. Completa los datos:
+   - **Repository name**: `la-nueva-era` (o el nombre que prefieras)
+   - **Description**: "Juego de texto ASCII - La Nueva Era"
+   - **Public** (para que todos puedan descargarlo)
+   - ✅ Marca **"Add a README file"**
+4. Click en **"Create repository"**
+5. **¡IMPORTANTE!** Copia la URL de tu repositorio (ejemplo: `https://github.com/TU_USUARIO/la-nueva-era`)
 
 ---
 
-## **Paso 5: Actualizar la URL del Repositorio en `version_checker.py`**
+## 🔧 Paso 4: Configurar Git en Termux
 
-Para que tu juego sepa dónde buscar las actualizaciones.
+Ejecuta estos comandos en Termux (reemplaza con tus datos):
 
-1.  Abre el archivo `version_checker.py` en Termux:
-    ```bash
-    nano /storage/emulated/0/La\ nueva\ era/game/utils/version_checker.py
-    ```
-2.  Busca la línea que dice:
-    ```python
-    github_url = "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/game/version.json"
-    ```
-3.  **Reemplaza `TU_USUARIO` con tu nombre de usuario de GitHub** y **`TU_REPO` con el nombre de tu repositorio** (el que creaste en el Paso 3).
-    *   Por ejemplo, si tu usuario es `MiUsuario` y tu repo es `la-nueva-era`, la línea quedaría:
-        ```python
-        github_url = "https://raw.githubusercontent.com/MiUsuario/la-nueva-era/main/game/version.json"
-        ```
-4.  Guarda el archivo: `Ctrl + S`, luego `Ctrl + X`.
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu_email@ejemplo.com"
+```
 
 ---
 
-## **Paso 6: ¡Prueba tu Juego!**
+## 📤 Paso 5: Subir el Juego a GitHub
 
-1.  Ejecuta tu juego desde `main.py`:
-    ```bash
-    python /storage/emulated/0/La\ nueva\ era/game/main.py
-    ```
-2.  Deberías ver la versión `v0.0.0.1` en la esquina del menú.
-3.  Como es la primera versión, no debería haber ninguna notificación de actualización.
+### 5.1 Navega a la carpeta del juego:
 
----
+```bash
+cd /storage/emulated/0/La\ nueva\ era
+```
 
-## **Paso 7: Publicar una Nueva Versión (¡Cuando tengas cambios!)**
+### 5.2 Inicializa Git:
 
-Cuando quieras que tus jugadores reciban una actualización:
+```bash
+git init
+```
 
-1.  **Edita el archivo `version.json`** en tu Termux:
-    ```bash
-    nano /storage/emulated/0/La\ nueva\ era/game/version.json
-    ```
-    *   Cambia `"version": "0.0.0.1"` a `"version": "0.0.0.2"` (o la siguiente versión).
-    *   **Actualiza el `changelog`** con las novedades de esta versión.
-    *   Guarda el archivo.
+### 5.3 Agrega todos los archivos:
 
-2.  **Realiza cualquier otro cambio en el código de tu juego.**
+```bash
+git add .
+```
 
-3.  **Sube los cambios a GitHub desde Termux:**
-    ```bash
-    cd /storage/emulated/0/La\ nueva\ era/game
-    git add .
-    git commit -m "Versión 0.0.0.2 - [Breve descripción de los cambios]"
-    git push origin main
-    ```
-    *   Reemplaza `[Breve descripción de los cambios]` con un mensaje claro de lo que actualizaste.
+### 5.4 Crea el primer commit:
 
-4.  **¡Listo!** La próxima vez que un jugador inicie el juego, recibirá la notificación de la nueva versión y las instrucciones para actualizar con `git pull`.
+```bash
+git commit -m "Versión inicial 0.0.0.1"
+```
 
----
+### 5.5 Conecta con tu repositorio de GitHub:
 
-## **Paso 8: Cómo los Jugadores Actualizan el Juego**
+Reemplaza `TU_USUARIO` y `TU_REPO` con tus datos:
 
-Cuando les digas a tus jugadores que hay una nueva versión, ellos solo necesitarán hacer esto en Termux:
+```bash
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+```
 
-1.  Abrir Termux.
-2.  Navegar a la carpeta del juego:
-    ```bash
-    cd /storage/emulated/0/La\ nueva\ era/game
-    ```
-3.  Ejecutar el comando para descargar los cambios:
-    ```bash
-    git pull origin main
-    ```
-    *   Esto descargará la nueva versión de tu juego desde GitHub.
+Ejemplo:
+```bash
+git remote add origin https://github.com/juan_dev/la-nueva-era.git
+```
+
+### 5.6 Sube los archivos a GitHub:
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+**Nota:** Te pedirá tu usuario y contraseña de GitHub. Si tienes autenticación de dos factores, necesitarás crear un **Personal Access Token** (te explico abajo).
 
 ---
 
-¡Felicidades! Ahora tienes un sistema de versiones completo para tu juego. Si tienes alguna duda en el proceso, ¡no dudes en preguntar!
+## 🔑 Crear Personal Access Token (si es necesario)
+
+Si GitHub te pide un token en lugar de contraseña:
+
+1. Ve a GitHub en tu navegador
+2. Click en tu foto de perfil → **Settings**
+3. Scroll hasta abajo → **Developer settings**
+4. **Personal access tokens** → **Tokens (classic)**
+5. **Generate new token** → **Generate new token (classic)**
+6. Dale un nombre: "Termux Access"
+7. Marca el checkbox: **repo** (acceso completo a repositorios)
+8. Click en **Generate token**
+9. **¡COPIA EL TOKEN!** (solo se muestra una vez)
+10. Usa este token como contraseña cuando Git te lo pida
+
+---
+
+## 🔄 Paso 6: Actualizar el archivo version_checker.py
+
+Edita el archivo `/utils/version_checker.py` y reemplaza esta línea:
+
+```python
+github_url = "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/version.json"
+```
+
+Por tu URL real, ejemplo:
+
+```python
+github_url = "https://raw.githubusercontent.com/juan_dev/la-nueva-era/main/version.json"
+```
+
+Para editar en Termux:
+
+```bash
+nano /storage/emulated/0/La\ nueva\ era/utils/version_checker.py
+```
+
+Presiona `Ctrl + X`, luego `Y`, luego `Enter` para guardar.
+
+---
+
+## 🚀 Paso 7: Publicar una Nueva Versión
+
+Cuando hagas cambios y quieras publicar una nueva versión:
+
+### 7.1 Actualiza el archivo `version.json`:
+
+```bash
+nano /storage/emulated/0/La\ nueva\ era/version.json
+```
+
+Cambia la versión y el changelog:
+
+```json
+{
+  "version": "0.0.0.2",
+  "release_date": "2024-01-16",
+  "changelog": [
+    "Nuevas animaciones mejoradas",
+    "Corrección de bugs",
+    "Sistema de actualizaciones implementado"
+  ]
+}
+```
+
+### 7.2 Sube los cambios a GitHub:
+
+```bash
+cd /storage/emulated/0/La\ nueva\ era
+git add .
+git commit -m "Versión 0.0.0.2 - Mejoras y correcciones"
+git push origin main
+```
+
+---
+
+## 📥 Cómo los Usuarios Descargan el Juego
+
+Los usuarios pueden descargar tu juego con:
+
+```bash
+cd /storage/emulated/0
+git clone https://github.com/TU_USUARIO/TU_REPO.git
+cd TU_REPO
+python main.py
+```
+
+---
+
+## 🔄 Cómo los Usuarios Actualizan el Juego
+
+Cuando publiques una nueva versión, los usuarios solo necesitan:
+
+```bash
+cd /storage/emulated/0/La\ nueva\ era
+git pull origin main
+```
+
+**¡Y el juego detectará automáticamente la nueva versión!** 🎉
+
+---
+
+## 📋 Resumen de Comandos Importantes
+
+| Acción | Comando |
+|--------|---------|
+| Ver estado de Git | `git status` |
+| Agregar cambios | `git add .` |
+| Crear commit | `git commit -m "mensaje"` |
+| Subir a GitHub | `git push origin main` |
+| Descargar cambios | `git pull origin main` |
+| Ver versión actual | `cat version.json` |
+
+---
+
+## ✅ Checklist Final
+
+- [ ] Git instalado en Termux
+- [ ] Cuenta de GitHub creada
+- [ ] Repositorio creado en GitHub
+- [ ] Git configurado con tu nombre y email
+- [ ] Juego subido a GitHub
+- [ ] URL actualizada en `version_checker.py`
+- [ ] Probado el sistema de actualizaciones
+
+---
+
+## 🆘 Problemas Comunes
+
+### Error: "Permission denied"
+```bash
+chmod +x /storage/emulated/0/La\ nueva\ era/main.py
+```
+
+### Error: "fatal: not a git repository"
+```bash
+cd /storage/emulated/0/La\ nueva\ era
+git init
+```
+
+### Error al hacer push
+- Verifica que la URL del repositorio sea correcta
+- Usa un Personal Access Token en lugar de contraseña
+
+---
+
+## 🎮 ¡Listo!
+
+Ahora tu juego está en GitHub y los usuarios recibirán notificaciones automáticas cuando publiques nuevas versiones.
+
+**URL de tu juego:** `https://github.com/TU_USUARIO/TU_REPO`
+
+¡Comparte este link con tus amigos para que jueguen! 🚀
+
