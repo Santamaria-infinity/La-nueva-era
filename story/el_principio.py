@@ -465,7 +465,7 @@ def epilogo():
     slow_print("\n\n✨ FIN DE 'EL PRINCIPIO' ✨")
     time.sleep(3)
     
-    input("\n\n[Presiona ENTER para volver al menú principal...]")
+    input("\n\n[Presiona ENTER para Continuar...]")
 
 def show_intro_story():
     """Función principal que ejecuta toda la historia"""
