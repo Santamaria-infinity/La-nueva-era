@@ -2,7 +2,7 @@
 
 Un juego de texto interactivo con animaciones ASCII que cuenta la historia de la humanidad después de un evento apocalíptico.
 
-![Versión](https://img.shields.io/badge/versión-0.0.0.1-blue)
+![Versión](https://img.shields.io/badge/versión-0.0.7-blue)
 ![Python](https://img.shields.io/badge/python-3.x-green)
 ![Plataforma](https://img.shields.io/badge/plataforma-Termux-orange)
 
@@ -20,24 +20,25 @@ Cuando el asteroide impacta, algo extraño sucede: todo desaparece excepto los h
 
 ## ✨ Características
 
-- 📜 **Historia épica completa** - "El Principio" con 9 partes narrativas
-- 🎨 **Animaciones ASCII detalladas** - 7 animaciones únicas con efectos visuales
-- 💾 **Sistema de guardado** - 3 slots de guardado independientes
-- 🔄 **Actualizaciones automáticas** - Detecta nuevas versiones desde GitHub
-- 🎮 **Menú interactivo** - Navegación intuitiva y fácil de usar
-- 📱 **Optimizado para Termux** - Funciona perfectamente en Android
+- 📜 **Historia épica completa** - "El Principio" con 9 partes narrativas y **Capítulo 2: La Caída del Creador**  
+- 🎨 **Animaciones ASCII detalladas** - 7 animaciones del capítulo 1 + nuevas animaciones del capítulo 2  
+- 💾 **Sistema de guardado** - 3 slots de guardado independientes  
+- 🔄 **Actualizaciones automáticas** - Detecta nuevas versiones desde GitHub  
+- 🎮 **Menú interactivo** - Navegación intuitiva y fácil de usar  
+- 📱 **Optimizado para Termux** - Funciona perfectamente en Android  
 
 ---
 
 ## 🎬 Animaciones Incluidas
 
-1. 🚀 **Científicos Huyendo** - Las naves de la elite despegando hacia Marte
-2. ⚡ **Desintegración Total** - Todo desaparece en una luz brillante
-3. 🌍 **Tierra Desolada** - El paisaje árido y sin vida
-4. 💀 **Caos Humano** - La lucha desesperada por sobrevivir
-5. ☁️ **Lluvia Milagrosa** - El agua cae sobre la tierra seca
-6. ✨ **Ángel Aparece** - Un ser de luz se materializa
-7. ⚡ **Poder Otorgado** - La energía divina fluye hacia ti
+1. 🚀 **Científicos Huyendo** - Las naves de la elite despegando hacia Marte  
+2. ⚡ **Desintegración Total** - Todo desaparece en una luz brillante  
+3. 🌍 **Tierra Desolada** - El paisaje árido y sin vida  
+4. 💀 **Caos Humano** - La lucha desesperada por sobrevivir  
+5. ☁️ **Lluvia Milagrosa** - El agua cae sobre la tierra seca  
+6. ✨ **Ángel Aparece** - Un ser de luz se materializa  
+7. ⚡ **Poder Otorgado** - La energía divina fluye hacia ti  
+8. 🏰 **Capítulo 2: La Caída del Creador** - Nuevas escenas y animaciones que continúan la historia  
 
 ---
 
